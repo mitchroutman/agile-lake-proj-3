@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/agileLake', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/agile-lake', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
