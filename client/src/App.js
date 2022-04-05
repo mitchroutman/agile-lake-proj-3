@@ -1,12 +1,14 @@
 import React from 'react';
+//import Create from './components/create';
+import { BrowserRouter } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import SearchBooks from './pages/SearchBooks';
-import SavedBooks from './pages/SavedBooks';
+import Intro from './pages/Intro';
+import Dashboard from './pages/Dashboard';
 import Navbar from './components/Navbar';
-import Contact from './pages/Intro'
+import Contact from './pages/Contact'
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <>
         <Navbar />
         <Routes>
@@ -16,11 +18,11 @@ function App() {
           />
           <Route 
             path='/' 
-            element={<SearchBooks />} 
+            element={<Intro />} 
           />
           <Route 
             path='/dashboard' 
-            element={<SavedBooks />} 
+            element={<Dashboard />} 
           />
           
           <Route 
@@ -29,10 +31,10 @@ function App() {
           />
         </Routes>
       </>
-    </Router>
+    </BrowserRouter>
 
     // <BrowserRouter>
-    //   < Header />
+    //   < Navbar />
       
     //  <Routes>
     //   < Route exact path="/login" component={Login} />
